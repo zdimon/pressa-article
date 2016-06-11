@@ -1,1 +1,25 @@
 <h1> На обработку </h1>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Обложка</th>
+        <th>Журнал</th>
+        <th>Номер выпуска</th>
+        <th>Дата выхода</th>
+        <th>Действие</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="i in issues">
+        <td><img src="{{ i.thumb }}"/></td>
+        <td>{{ i.journal }}</td>
+        <td>{{ i.name }}</td>
+        <td>{{ i.release_date }}</td>
+        <td><a class="btn btn-primary" href="#issue/detail/{{ i.id }}"> Редактировать </a>
+            <a class="btn btn-primary" target="_blank" href="http://pressa.ru/moderator/{{i.id}}/txt_page_html"> Смотреть текст </a>
+        </td>
+      </tr>
+      
+    </tbody>
+</table>
